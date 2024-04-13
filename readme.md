@@ -10,7 +10,7 @@ Client with reception data on socket thread, ping thread, quit command
 
 ```bash
 sudo apt-get update
-sudo apt-get install build-essential  # Install necessary build tools
+sudo apt-get install build-essential
 ```
 
 ### Fedora
@@ -25,8 +25,10 @@ sudo dnf install gcc
 sudo yum groupinstall "Development Tools"
 ```
 
-After the compile is done you need to add execute permission on the executables:
+Compile and add execute permission:
 ```bash
+chmod +x build.sh
+./build.sh
 chmod +x SERVER/server CLIENT/client
 ```
 
@@ -35,7 +37,7 @@ Now you can run the server that listens for connections:
 ./SERVER/server
 ```
 
-After setting the server on listening it is possible to start as many client as you need (adjust MAX_CLIENTS defined in socket.h)
+After setting the server on listening it is possible to start as many clients as you need (adjust MAX_CLIENTS defined in socket.h)
 ```bash
 ./CLIENT/client
 ```
